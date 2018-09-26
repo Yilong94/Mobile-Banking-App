@@ -7,23 +7,23 @@
     tools:context="com.example.cindy.op.OptionsPage"
     android:background="@drawable/gradientiou">
 
-    <FrameLayout
-        android:id="@+id/sendrequestheader"
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:background="#80000000">
+    <!--<FrameLayout-->
+        <!--android:id="@+id/sendrequestheader"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="65dp"-->
+        <!--android:background="#80000000">-->
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center"
-            android:fontFamily="@font/pacifico"
-            android:gravity="center"
-            android:text="Select Option"
-            android:textAppearance="@style/TextAppearance.AppCompat"
-            android:textSize="24dp" />
+        <!--<TextView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:fontFamily="@font/pacifico"-->
+            <!--android:gravity="center"-->
+            <!--android:text="Select Option"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat"-->
+            <!--android:textSize="24dp" />-->
 
-    </FrameLayout>
+    <!--</FrameLayout>-->
 
     <FrameLayout
         android:layout_width="match_parent"

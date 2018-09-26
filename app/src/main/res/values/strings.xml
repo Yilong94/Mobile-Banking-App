@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">o$p$</string>
+    <string name="app_name">BOC Mobile Banking</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -8,6 +8,9 @@
     <string name="selectfriends">Select Friends</string>
     <string name="i_o_u">I.O.U</string>
     <string name="u_o_m">U.O.M</string>
+
+    <string name="txt_message">No Text Available</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
 
 
 </resources>

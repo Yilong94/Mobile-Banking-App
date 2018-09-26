@@ -50,6 +50,7 @@ public class OptionsPage extends AppCompatActivity {
 
        //function that invokes an intent to capture a photo
     private void dispatchTakePictureIntent(){
+        // capture image as an intent
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null){
             //Create the File where the photo should go

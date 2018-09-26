@@ -119,16 +119,18 @@ public class ContactsActivity extends AppCompatActivity {
         //POST /api/receipt/v1/verbose/url
 
         Intent intent = getIntent();
-        capturedImageString = intent.getStringExtra(MainActivity.IMAGEKEY);
+        capturedImageString = intent.getStringExtra(Camera2Activity.DATAKEY);
         Log.i("capturedImageString", capturedImageString);
+
+
         //filepath for uploading image into firebase
         //filePath = Uri.parse(capturedImageString);
 
         //executes async task for POST request and get response
-        GetResponse getResponse = new GetResponse();
-        getResponse.execute(sandBoxUrl);
+        //GetResponse getResponse = new GetResponse();
+        //getResponse.execute(sandBoxUrl);
 
-        contact_name_hash = new HashMap<>();
+        //contact_name_hash = new HashMap<>();
 
     }
 

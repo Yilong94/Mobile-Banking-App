@@ -47,7 +47,9 @@ public class LoginScreen extends AppCompatActivity {
                 editor.putString("phone", passwordstring);
                 editor.commit();
 
-                Intent intent = new Intent(view.getContext(), OptionsPage.class);
+                //Intent intent = new Intent(view.getContext(), OptionsPage.class);
+                //startActivity(intent);
+                Intent intent = new Intent(view.getContext(), Camera2Activity.class);
                 startActivity(intent);
             }
         });
