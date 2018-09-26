@@ -90,7 +90,7 @@ public class ContactsActivity extends AppCompatActivity {
 
     //private Uri filePath;
 
-    String capturedImageString;
+    static String capturedImageString;
 
     public static HashMap<String, String> contact_name_hash;
 
@@ -109,7 +109,8 @@ public class ContactsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), SelectFriendActivity.class);
-                intent.putExtra("foodjson",foodjson);
+                intent.putExtra("foodjson",capturedImageString);
+                //intent.putExtra("foodjson",foodjson);
                 startActivity(intent);
             }
         });
@@ -120,6 +121,7 @@ public class ContactsActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         capturedImageString = intent.getStringExtra(Camera2Activity.DATAKEY);
+        capturedImageString = parseString(capturedImageString);
         Log.i("capturedImageString", capturedImageString);
 
 
@@ -130,8 +132,39 @@ public class ContactsActivity extends AppCompatActivity {
         //GetResponse getResponse = new GetResponse();
         //getResponse.execute(sandBoxUrl);
 
-        //contact_name_hash = new HashMap<>();
+        contact_name_hash = new HashMap<>();
 
+    }
+
+    public String parseString(String s){
+        ArrayList<String> stringarray_item = new ArrayList<>();
+        ArrayList<String> stringarray_price = new ArrayList<>();
+        JSONObject json_array = new JSONObject();
+        String[] parts = s.split("\n");
+        for(int i=0;i<parts.length;i++){
+            String current_str = parts[i];
+            if (current_str.toLowerCase().contains("tian") || current_str.toLowerCase().contains("total")||current_str.toLowerCase().contains("charge")||current_str.toLowerCase().contains("gst")||current_str.toLowerCase().contains("subtotal")||current_str.toLowerCase().contains("singapore")||current_str.toLowerCase().contains("#")||current_str.toLowerCase().contains("pm")||current_str.toLowerCase().contains("bill")||current_str.toLowerCase().contains("mains")||current_str.toLowerCase().contains("%")||current_str.toLowerCase().contains("-")){
+                continue;
+            }
+            if (current_str.contains("$")){
+                stringarray_price.add(parts[i]);
+            }
+            else{
+                stringarray_item.add(parts[i]);
+            }
+        }
+        for (int i=0;i<stringarray_item.size();i++){
+            try{
+                Log.i("error1",stringarray_item.get(i));
+                Log.i("error2",stringarray_price.get(i));
+                json_array.put(stringarray_item.get(i), stringarray_price.get(i));
+            }
+            catch (JSONException e){
+                e.printStackTrace();
+            }
+
+        }
+        return json_array.toString();
     }
 
     public void pickContact(View v) {

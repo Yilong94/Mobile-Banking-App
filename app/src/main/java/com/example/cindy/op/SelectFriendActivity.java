@@ -56,7 +56,7 @@ public class SelectFriendActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_friend);
         face = ResourcesCompat.getFont(this, R.font.geosanslight);
-        String myJsonData = ContactsActivity.foodjson;
+        String myJsonData = ContactsActivity.capturedImageString;
 
       //  String myJsonData = getIntent().getExtras().getString("foodjson");
         System.out.println("myJSON"+myJsonData);
@@ -167,10 +167,15 @@ public class SelectFriendActivity extends AppCompatActivity {
                         }
 
                         TextView nameprice = (TextView) rowView.findViewById(R.id.food_name);
+                        Log.i("hello",nameprice.getText().toString());
                         String[] namepricelist = nameprice.getText().toString().split("-");
                         System.out.println(nameprice.getText().toString() + "food name");
                         String name = namepricelist[0];
-                        Double price = Double.parseDouble(namepricelist[1]);
+                        String oldprice = namepricelist[1];
+                        if (oldprice.contains("$")){
+                            oldprice = oldprice.substring(0,oldprice.indexOf("$")) + oldprice.substring(oldprice.indexOf("$")+1);
+                        }
+                        Double price = Double.parseDouble(oldprice);
                         for (String k : friendsselected) {
                             if (friendsrequesting.containsKey(k) == false) {
                                 friendsrequesting.put((String) k, round(price / friendsselected.size(),2));
@@ -259,7 +264,11 @@ public class SelectFriendActivity extends AppCompatActivity {
                 String key = (String) keys.next();
                 foodItems.add(key + " - " + jsonObject.get(key));
                 String value = (String)jsonObject.get(key);
+                if (value.contains("$")){
+                    value = value.substring(0,value.indexOf("$")) + value.substring(value.indexOf("$")+1);
+                }
                 friendsPayment.put(key, (Double) Double.parseDouble(value));
+
               /*  if (jsonObject.get(key) instanceof JSONObject) {
                     textArray.add(key + " - " + jsonObject.get(key));
                 }*/
