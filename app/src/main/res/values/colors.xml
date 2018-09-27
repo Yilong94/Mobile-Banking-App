@@ -9,5 +9,8 @@
     <color name="darkblue">#1D3F5C</color>
     <color name="beige">#F2FFE3</color>
     <color name="orange">#EB7F00</color>
+    <color name="login_bg">#44FFFFFF</color>
+    <color name="button">#35FFFFFF</color>
+
 
 </resources>

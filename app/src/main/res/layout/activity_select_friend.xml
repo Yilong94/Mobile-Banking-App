@@ -9,7 +9,7 @@
         android:id="@+id/select_friend_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/gradient"
+        android:background="@drawable/red"
         android:orientation="vertical">
 
 
@@ -22,7 +22,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:fontFamily="@font/pacifico"
+                android:fontFamily="@font/comfortaa"
                 android:gravity="center"
                 android:text="Food Buddies"
                 android:textAppearance="@style/TextAppearance.AppCompat"
@@ -54,7 +54,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginBottom="10dp"
                 android:textSize="20dp"
-                android:fontFamily="@font/geosanslight"
+                android:fontFamily="@font/comfortaa"
                 app:layout_constraintBottom_toBottomOf="parent"
                 android:textColor="@android:color/white" />
         </LinearLayout>

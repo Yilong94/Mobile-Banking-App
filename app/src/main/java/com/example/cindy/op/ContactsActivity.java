@@ -143,7 +143,7 @@ public class ContactsActivity extends AppCompatActivity {
         String[] parts = s.split("\n");
         for(int i=0;i<parts.length;i++){
             String current_str = parts[i];
-            if (current_str.toLowerCase().contains("tian") || current_str.toLowerCase().contains("total")||current_str.toLowerCase().contains("charge")||current_str.toLowerCase().contains("gst")||current_str.toLowerCase().contains("subtotal")||current_str.toLowerCase().contains("singapore")||current_str.toLowerCase().contains("#")||current_str.toLowerCase().contains("pm")||current_str.toLowerCase().contains("bill")||current_str.toLowerCase().contains("mains")||current_str.toLowerCase().contains("%")||current_str.toLowerCase().contains("-")){
+            if (current_str.toLowerCase().contains("tian") || current_str.toLowerCase().contains("total")||current_str.toLowerCase().contains("charge")||current_str.toLowerCase().contains("gst")||current_str.toLowerCase().contains("subtotal")||current_str.toLowerCase().contains("singapore")||current_str.toLowerCase().contains("#")||current_str.toLowerCase().contains("pm")||current_str.toLowerCase().contains("bill")||current_str.toLowerCase().contains("mains")||current_str.toLowerCase().contains("%")||current_str.toLowerCase().contains("-")||current_str.toLowerCase().contains("thank")||current_str.toLowerCase().contains("please")){
                 continue;
             }
             if (current_str.contains("$")){

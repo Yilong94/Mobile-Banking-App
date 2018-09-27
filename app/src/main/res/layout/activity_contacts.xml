@@ -5,7 +5,7 @@
     android:id="@+id/ll_example"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/red"
     android:orientation="vertical">
     <FrameLayout
         android:layout_width="match_parent"
@@ -16,9 +16,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:fontFamily="@font/pacifico"
+            android:fontFamily="@font/comfortaa"
             android:gravity="center"
-            android:text="Select Food Buddies"
+            android:text="Add your friends"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textSize="24dp" />
 
@@ -39,7 +39,7 @@
         android:layout_marginTop="20dp"
         app:layout_constraintLeft_toLeftOf="parent"
         android:background="@drawable/transparentbutton"
-        android:fontFamily="@font/geosanslight"
+        android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:onClick="pickContact"
         android:text="Add Contact"
@@ -57,7 +57,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:background="@drawable/transparentbutton"
-        android:fontFamily="@font/geosanslight"
+        android:fontFamily="@font/comfortaa"
         android:gravity="center"
         android:text="Next"
         android:textColor="@android:color/white"
@@ -90,7 +90,7 @@
             android:gravity="center"
             android:layout_marginTop="30dp"
             android:textSize="20dp"
-            android:fontFamily="@font/geosanslight"
+            android:fontFamily="@font/comfortaa"
             android:layout_gravity="center"
             android:textColor="@android:color/white" />
     </FrameLayout>

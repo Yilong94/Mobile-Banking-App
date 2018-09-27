@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradientrequest"
+    android:background="@drawable/red"
     android:orientation="vertical"
     tools:context="com.example.cindy.op.RequestingPage">
     <LinearLayout
@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:fontFamily="@font/pacifico"
+            android:fontFamily="@font/comfortaa"
             android:gravity="center"
             android:text="Send Requests"
             android:textAppearance="@style/TextAppearance.AppCompat"
@@ -50,7 +50,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/transparentbutton"
-        android:fontFamily="@font/geosanslight"
+        android:fontFamily="@font/comfortaa"
         android:text="Completed Transaction"
         app:layout_constraintBottom_toBottomOf="parent"></Button>
 
